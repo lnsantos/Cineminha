@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="blue_100">#012A4A</color>
+    <color name="blue_090">#013A63</color>
+    <color name="blue_080">#01497C</color>
+    <color name="blue_070">#014F86</color>
+    <color name="blue_060">#2A6F97</color>
+    <color name="blue_050">#2C7DA0</color>
+    <color name="blue_040">#468FAF</color>
+    <color name="blue_030">#61A5C2</color>
+    <color name="blue_020">#89C2D9</color>
+    <color name="blue_010">#A9D6E5</color>
+
+    <color name="green_100">#081C15</color>
+    <color name="green_090">#1B4332</color>
+    <color name="green_080">#2D6A4F</color>
+    <color name="green_070">#40916C</color>
+    <color name="green_060">#52B788</color>
+    <color name="green_050">#74C69D</color>
+    <color name="green_040">#95D5B2</color>
+    <color name="green_030">#B7E4C7</color>
+    <color name="green_020">#D8F3DC</color>
+
+</resources>
