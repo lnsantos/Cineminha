@@ -11,4 +11,5 @@ object Libs {
     const val testJunitExt = "androidx.test.ext:junit:1.1.3"
     const val testExpresso = "androidx.test.espresso:espresso-core:3.4.0"
 
+    const val lottie = "com.airbnb.android:lottie:${Versions.lottie}"
 }

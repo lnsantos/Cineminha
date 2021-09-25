@@ -1,11 +1,12 @@
 object Default {
 
-    const val applicationId = "com.lnsantos.mymovieschapter"
-    const val minSdkVersion = 21
-    const val targetSdkVersion =30
-    const val versionCode = 1
-    const val versionName = "alpha-chapter.01"
+    const val applicationIdApp = "com.lnsantos.mymovieschapter"
 
-    const val compileSdkVersion = 30
-    const val buildToolsVersion = "30.0.3"
+    const val defaultMinSdkVersion = 21
+    const val defaultTargetSdkVersion =30
+    const val defaultVersionCode = 1
+    const val defaultVersionName = "alpha-chapter.01"
+
+    const val defaultCompileSdkVersion = 30
+    const val defaultBuildToolsVersion = "30.0.3"
 }

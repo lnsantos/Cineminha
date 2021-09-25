@@ -1,2 +1,3 @@
 rootProject.name = "My Movies Chapter"
 include ':app'
+include ':base'

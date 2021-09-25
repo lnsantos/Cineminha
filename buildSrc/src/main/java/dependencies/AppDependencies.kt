@@ -9,7 +9,8 @@ object AppDependencies {
         Libs.material,
         Libs.constraintLayout,
         Libs.codeKtx,
-        Libs.appcompat
+        Libs.appcompat,
+        Libs.lottie
     )
 
     val appAndroidTestImplementation = arrayListOf(

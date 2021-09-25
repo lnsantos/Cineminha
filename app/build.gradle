@@ -8,16 +8,16 @@ plugins {
 
 android {
 
-    compileSdkVersion Default.compileSdkVersion
-    buildToolsVersion Default.buildToolsVersion
+    compileSdkVersion Default.defaultCompileSdkVersion
+    buildToolsVersion Default.defaultBuildToolsVersion
 
     defaultConfig {
 
-        applicationId Default.applicationId
-        minSdkVersion Default.minSdkVersion
-        targetSdkVersion Default.targetSdkVersion
-        versionCode Default.versionCode
-        versionName Default.versionName
+        applicationId Default.applicationIdApp
+        minSdkVersion Default.defaultMinSdkVersion
+        targetSdkVersion Default.defaultTargetSdkVersion
+        versionCode Default.defaultVersionCode
+        versionName Default.defaultVersionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -42,8 +42,12 @@ android {
 
 dependencies {
 
-    implementation (AppDependencies.appImplementation)
+    Modules.appInjectModules.forEach { moduleName ->
+        logger.info("Adding $moduleName inside module ${Modules.app}")
+        implementation(project(moduleName))
+    }
 
+    implementation (AppDependencies.appImplementation)
     testImplementation (AppDependencies.appTestImplementation)
     androidTestImplementation (AppDependencies.appAndroidTestImplementation)
 
