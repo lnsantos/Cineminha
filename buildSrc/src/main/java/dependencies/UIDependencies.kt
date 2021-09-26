@@ -11,7 +11,8 @@ object UIDependencies {
         Libs.lottie,
         Libs.viewModel,
         Libs.lifecyclesRuntime,
-        Libs.liveData
+        Libs.liveData,
+        Libs.fragmentKtx
     )
 
     val androidTestImplementations = arrayListOf(

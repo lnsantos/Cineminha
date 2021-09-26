@@ -6,6 +6,7 @@ import com.lnsantos.base.navigation.model.FragmentData
 import com.lnsantos.base.navigation.model.FragmentId
 import com.lnsantos.signin.SignInFragment
 import com.lnsantos.signup.SignUpFragment
+import com.lnsantos.welcome.WelcomeFragment
 
 
 class AppNavigationController : NavigationController {
@@ -26,7 +27,13 @@ class AppNavigationController : NavigationController {
                 }
             }
 
-            else -> SignInFragment()
+            FragmentId.WELCOME -> {
+                WelcomeFragment().apply {
+                    arguments = fragmentData.bundle
+                }
+            }
+
+            else -> WelcomeFragment()
         }
     }
 }

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="string_welcome_title">BEM-VINDO</string>
+    <string name="string_welcome_ap_title">CINEMINHA</string>
+    <string name="string_welcome_button_title_sign_up">CRIAR UMA CONTA</string>
+    <string name="string_welcome_button_title_sign_in">ACESSAR MINHA CONTA</string>
+</resources>

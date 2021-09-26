@@ -34,4 +34,5 @@ class SignUpFragment : BaseFragment(){
             root
         }
     }
+
 }

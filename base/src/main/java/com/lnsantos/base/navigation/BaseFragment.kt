@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.lnsantos.base.navigation.model.FragmentData
 
-abstract class BaseFragment : Fragment() {
+abstract class BaseFragment : Fragment(), OnBackPressed {
 
     abstract val fragmentData : FragmentData
     abstract val name : String
@@ -33,4 +33,5 @@ abstract class BaseFragment : Fragment() {
         init(savedInstanceState)
     }
 
+    override fun onBackPressed(): Boolean = true
 }

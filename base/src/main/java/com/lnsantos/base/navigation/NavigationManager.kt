@@ -6,8 +6,8 @@ import com.lnsantos.base.navigation.model.FragmentId
 
 object NavigationManager {
 
-    private var currentFragment : FragmentId = FragmentId.SIGN_IN
-    private var previousFragment : FragmentId = FragmentId.SIGN_IN
+    private var currentFragment : FragmentId = FragmentId.WELCOME
+    private var previousFragment : FragmentId = FragmentId.WELCOME
     private var history : ArrayList<FragmentData> = arrayListOf()
 
     private var callback : NavigationListener? = null
@@ -18,9 +18,10 @@ object NavigationManager {
             throw NavigationManagerException("NavigationListener not be implemented")
         }
 
-        history.takeIf { it.isNotEmpty() }?.first()?.let { data ->
-            addFragment(data)
-        }
+        history.takeIf { it.isNotEmpty() }
+               ?.first()
+               ?.let { data -> addFragment(data)}
+               ?: addFragment(FragmentData(currentFragment))
     }
 
     fun onNavigationConnection(_callback : NavigationListener){

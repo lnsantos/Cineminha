@@ -7,6 +7,7 @@
       <module name="My_Movies_Chapter.base" target="11" />
       <module name="My_Movies_Chapter.ui.signin" target="11" />
       <module name="My_Movies_Chapter.ui.signup" target="11" />
+      <module name="My_Movies_Chapter.ui.welcome" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

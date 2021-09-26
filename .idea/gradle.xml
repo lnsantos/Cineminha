@@ -12,10 +12,12 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/base" />
+            <option value="$PROJECT_DIR$/base-clean" />
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/ui" />
             <option value="$PROJECT_DIR$/ui/signin" />
             <option value="$PROJECT_DIR$/ui/signup" />
+            <option value="$PROJECT_DIR$/ui/welcome" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
