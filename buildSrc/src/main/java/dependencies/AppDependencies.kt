@@ -10,7 +10,10 @@ object AppDependencies {
         Libs.constraintLayout,
         Libs.codeKtx,
         Libs.appcompat,
-        Libs.lottie
+        Libs.lottie,
+        Libs.viewModel,
+        Libs.lifecyclesRuntime,
+        Libs.liveData
     )
 
     val appAndroidTestImplementation = arrayListOf(

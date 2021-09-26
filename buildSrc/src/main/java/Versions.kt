@@ -6,6 +6,6 @@ object Versions {
     const val material = "1.3.0"
     const val kotlin = "1.5.10"
     const val lottie = "4.1.0"
-
+    const val lifecycle = "2.3.0"
 
 }

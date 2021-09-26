@@ -12,4 +12,9 @@ object Libs {
     const val testExpresso = "androidx.test.espresso:espresso-core:3.4.0"
 
     const val lottie = "com.airbnb.android:lottie:${Versions.lottie}"
+
+    const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
+    const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
+    const val lifecyclesRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
+
 }

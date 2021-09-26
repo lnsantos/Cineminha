@@ -9,4 +9,5 @@ object Default {
 
     const val defaultCompileSdkVersion = 30
     const val defaultBuildToolsVersion = "30.0.3"
+
 }
