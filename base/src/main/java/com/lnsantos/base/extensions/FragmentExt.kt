@@ -11,6 +11,10 @@ fun AppCompatActivity.inflateFragmentInView(
     fragment: BaseFragment
 ){
     supportFragmentManager.beginTransaction()
+                          .setCustomAnimations(
+                              R.anim.fragment_slide_in,
+                              R.anim.fragment_slide_out
+                          )
                           .replace(view.id, fragment)
                           .addToBackStack(null)
                           .commit()
