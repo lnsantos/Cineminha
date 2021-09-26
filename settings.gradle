@@ -1,3 +1,6 @@
 rootProject.name = "My Movies Chapter"
 include ':app'
 include ':base'
+include ':ui'
+include ':ui:signin'
+include ':ui:signup'

@@ -1,15 +1,27 @@
 package com.lnsantos.base.navigation
 
+import com.lnsantos.base.navigation.exception.NavigationManagerException
 import com.lnsantos.base.navigation.model.FragmentData
 import com.lnsantos.base.navigation.model.FragmentId
 
 object NavigationManager {
 
-    private var currentFragment : FragmentId = FragmentId.NONE
-    private var previousFragment : FragmentId = FragmentId.NONE
+    private var currentFragment : FragmentId = FragmentId.SIGN_IN
+    private var previousFragment : FragmentId = FragmentId.SIGN_IN
     private var history : ArrayList<FragmentData> = arrayListOf()
 
     private var callback : NavigationListener? = null
+
+    fun onCreate(){
+
+        check(callback != null){
+            throw NavigationManagerException("NavigationListener not be implemented")
+        }
+
+        history.takeIf { it.isNotEmpty() }?.first()?.let { data ->
+            addFragment(data)
+        }
+    }
 
     fun onNavigationConnection(_callback : NavigationListener){
         this.callback = _callback
@@ -25,7 +37,14 @@ object NavigationManager {
                                   .takeIf { it.isNotEmpty() }
                                   ?.run { first() }
 
+
         callback?.onNextFragment(findFragment)
+
+    }
+
+    fun onClean(){
+        history.clear()
+        addFragment(FragmentData(FragmentId.SIGN_IN))
     }
 
     fun onBackFragment(){
@@ -42,7 +61,9 @@ object NavigationManager {
                                   .takeIf { it.isNotEmpty() }
                                   ?.run { first() }
 
+
         callback?.onBackFragment(findFragment)
+
     }
 
     private fun isSingleOnlyScreen() : Boolean {

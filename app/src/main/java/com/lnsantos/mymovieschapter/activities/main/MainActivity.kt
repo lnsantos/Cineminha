@@ -2,7 +2,6 @@ package com.lnsantos.mymovieschapter.activities.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import com.lnsantos.base.nextActivity
 import com.lnsantos.mymovieschapter.R
 import com.lnsantos.mymovieschapter.activities.app.AppActivity

@@ -48,7 +48,7 @@ android {
 dependencies {
 
     Modules.appInjectModules.forEach { moduleName ->
-        logger.info("Adding $moduleName inside module ${Modules.app}")
+        logger.info("Adding $moduleName inside module ${Modules.APP}")
         implementation(project(moduleName))
     }
 

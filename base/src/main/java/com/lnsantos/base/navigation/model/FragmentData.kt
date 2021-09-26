@@ -1,8 +1,8 @@
 package com.lnsantos.base.navigation.model
 
-import com.lnsantos.base.navigation.BaseFragment
+import android.os.Bundle
 
 data class FragmentData(
     val id : FragmentId,
-    val fragment: BaseFragment
+    val bundle : Bundle? = null
 )
