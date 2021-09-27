@@ -1,3 +1,4 @@
+import dependencies.AppDependencies
 import dependencies.BaseDependencies
 
 plugins {
@@ -36,5 +37,8 @@ android {
 
 dependencies {
 
-    implementation(BaseDependencies.implementations)
+    implementation (BaseDependencies.implementations)
+    testImplementation (BaseDependencies.testImplementations)
+    androidTestImplementation (BaseDependencies.androidTestImplementations)
+    implementation "org.jetbrains.kotlin:kotlin-reflect:1.5.10"
 }

@@ -12,16 +12,21 @@ object UIDependencies {
         Libs.viewModel,
         Libs.lifecyclesRuntime,
         Libs.liveData,
-        Libs.fragmentKtx
+        Libs.fragmentKtx,
+        Libs.testHamcrest
     )
 
     val androidTestImplementations = arrayListOf(
         Libs.testJunitExt,
-        Libs.testExpresso
+        Libs.testExpresso,
+        Libs.testMockkAndroid,
+        Libs.testHamcrestLibrary
+
     )
 
     val testImplementations = arrayListOf(
-        Libs.testJunit
+        Libs.testJunit,
+        Libs.testMockK
     )
 
 }

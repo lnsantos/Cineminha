@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/blue_100">
 
         <ImageView
             android:id="@+id/icon_back"
@@ -11,6 +13,7 @@
             android:layout_height="34dp"
             android:layout_margin="16dp"
             android:src="@drawable/ic_back_arrow"
+            android:backgroundTint="@color/blue_010"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -18,11 +21,98 @@
             android:id="@+id/txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tela de cadastro"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:fontFamily="@font/bebas_neue_regular"
+            android:text="CADASTRO DE USUÁRIO"
+            android:textColor="@color/blue_020"
+            android:textSize="32sp"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toEndOf="@+id/icon_back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_name"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Usuário"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textSize="16sp"
+            android:textColorHint="@color/blue_090"
+            app:hintTextColor="@color/blue_090"
+            app:placeholderTextColor="@color/blue_090"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/txt">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Email"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textSize="16sp"
+            android:textColorHint="@color/blue_090"
+            app:hintTextColor="@color/blue_090"
+            app:placeholderTextColor="@color/blue_090"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textWebEmailAddress"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Senha"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textSize="16sp"
+            android:textColorHint="@color/blue_090"
+            app:hintTextColor="@color/blue_090"
+            app:placeholderTextColor="@color/blue_090"
+            app:passwordToggleEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/button_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Cadastrar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_password" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

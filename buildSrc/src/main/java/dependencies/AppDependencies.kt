@@ -13,16 +13,20 @@ object AppDependencies {
         Libs.lottie,
         Libs.viewModel,
         Libs.lifecyclesRuntime,
-        Libs.liveData
+        Libs.liveData,
+        Libs.testHamcrest
     )
 
     val appAndroidTestImplementation = arrayListOf(
         Libs.testJunitExt,
-        Libs.testExpresso
+        Libs.testExpresso,
+        Libs.testHamcrestLibrary
     )
 
     val appTestImplementation = arrayListOf(
-        Libs.testJunit
+        Libs.testJunit,
+        Libs.testMockK
+
     )
 
 }
